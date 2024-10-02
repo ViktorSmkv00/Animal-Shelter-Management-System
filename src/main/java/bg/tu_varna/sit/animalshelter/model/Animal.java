@@ -14,7 +14,7 @@ import java.util.UUID;
 @Table(name = "animals")
 public class Animal {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // Използвайте, ако искате JPA да генерира ID
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotBlank(message = "Type is mandatory")
@@ -26,7 +26,7 @@ public class Animal {
     @NotBlank(message = "Date is mandatory")
     private String date;
 
-    // Конструктор без аргументи (необходим за JPA)
+
     public Animal() {
     }
 
@@ -40,7 +40,7 @@ public class Animal {
         this.date = date;
     }
 
-    // Гетъри и сетъри
+
     public Long getId() {
         return id;
     }
